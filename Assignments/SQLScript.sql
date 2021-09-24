@@ -166,7 +166,7 @@ join accounts a ON ac.account_id = a.account_id
 where name like '%Smith'
 
 # Get the name and address of any customer with less than $50 in an account. (No duplicates!)
-select c.name as "Customer(s) with a balance less than $50: ", CONCAT(ad.address," ", ad.city," ", ad.state," ", ad.zip) as "home Address", a.balance
+select c.name as "Customer(s) with a balance less than $50: ", CONCAT(ad.address," ", ad.city," ", ad.state," ", ad.zip) as "home Address", a.balance	
 from customers c
 join address ad on c.address_id = ad.address_id 
 join accounts_customers ac on c.customer_id = ac.customer_id 
